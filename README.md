@@ -1,8 +1,8 @@
 
-DSP Sound Card Audio Router
+Stream ASIO-HDMI Sound Card
 ==========================
 
-DSP Sound Card Audio Router is a lightweight tool to route audio from one ASIO interface to another — specifically designed to work with the DSP mix output of sound cards like Creative X-Fi.
+Stream ASIO-HDMI Sound Card is a lightweight tool to route audio from one ASIO interface to another — specifically designed to work with the DSP mix output of sound cards like Creative X-Fi.
 
 Key Features
 - Route the DSP mix output of your sound card directly to an HDMI device
