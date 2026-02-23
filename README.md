@@ -26,3 +26,14 @@ To avoid clipping when routing the DSP output:
   - –24 dB if Crystalizer is enabled with high settings
 
 This helps keep the signal clean before it reaches the HDMI output.
+
+Building the Installer
+-----------------------
+
+### Option 1: Inno Setup (Recommended)
+
+1. Download and install [Inno Setup](https://jrsoftware.org/isdl.php)
+2. Open `Setup\setup.iss` in Inno Setup Compiler
+3. Press Ctrl+F9 to compile
+4. The installer will be created in `Output` folder
+
