@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ASIORecAndPlay"
         xmlns:controls="clr-namespace:AudioVUMeter.Controls;assembly=AudioVUMeterWPFControl"
         mc:Ignorable="d"
-        Title="ASIO Rec and Play" Height="640" Width="480" MinWidth="300" MinHeight="300"
+        Title="Stream ASIO-HDMI Sound Card" Height="640" Width="480" MinWidth="300" MinHeight="300"
         Closing="Window_Closing"
         Loaded="Window_Loaded">
     <DockPanel>
