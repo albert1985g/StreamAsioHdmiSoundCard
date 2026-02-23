@@ -7,7 +7,8 @@
         xmlns:controls="clr-namespace:AudioVUMeter.Controls;assembly=AudioVUMeterWPFControl"
         mc:Ignorable="d"
         Title="ASIO Rec and Play" Height="640" Width="480" MinWidth="300" MinHeight="300"
-        Closing="Window_Closing">
+        Closing="Window_Closing"
+        Loaded="Window_Loaded">
     <DockPanel>
         <StatusBar DockPanel.Dock="Bottom">
             <StatusBarItem>
@@ -79,6 +80,9 @@
                         <StackPanel Grid.Column="0" Margin="0,0,2,0">
                             <TextBlock>Device</TextBlock>
                             <ComboBox Name="UI_RecordDevices" SelectionChanged="OnDeviceComboBoxStateChanged" Margin="0,0,0,5" />
+                            <TextBlock>Sample rate</TextBlock>
+                            <ComboBox Name="UI_RecordDeviceSampleRate" SelectionChanged="OnDeviceSampleRateComboBoxStateChanged" Margin="0,0,0,5" />
+                            <TextBlock>Driver settings</TextBlock>
                             <Button Name="buttonRecCP" Content="Control Panel" Click="OnButtonCPClick" Margin="0,0,0,5" />
                         </StackPanel>
                     </GroupBox>
@@ -130,7 +134,7 @@
                                     <ColumnDefinition />
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Name="UI_WasapiLatencyText" Grid.Column="0" />
-                                <Slider Name="UI_WasapiLatency" Grid.Column="0" Grid.Row="1" Minimum="5" Maximum="250" LargeChange="20" SmallChange="1" ValueChanged="UI_WasapiLatency_ValueChanged" Value="10" />
+                                <Slider Name="UI_WasapiLatency" Grid.Column="0" Grid.Row="1" Minimum="5" Maximum="1000" LargeChange="20" SmallChange="1" ValueChanged="UI_WasapiLatency_ValueChanged" Value="10" />
                                 <CheckBox Name="UI_WasapiExclusiveMode" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsChecked="True">Exclusive</CheckBox>
                                 <CheckBox Name="UI_WasapiPullMode" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsChecked="True">Pull mode</CheckBox>
                                 <Border Grid.Row="2" Grid.ColumnSpan="2" Margin="4" BorderThickness="0,1,0,0" BorderBrush="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" />
